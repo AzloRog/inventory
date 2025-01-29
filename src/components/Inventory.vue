@@ -3,6 +3,10 @@ import InventoryLeftSideBar from './InventoryLeftSideBar.vue';
 import placeholderImage from "../images/SidebarPlaceholder.jpg"
 import InventoryGrid from './InventoryGrid.vue';
 import InventoryBottomBar from './InventoryBottomBar.vue';
+import { places } from '@/data/Items';
+import { computed, ref } from 'vue';
+
+
 
 </script>
 
@@ -10,7 +14,7 @@ import InventoryBottomBar from './InventoryBottomBar.vue';
     <div class="inventory">
         <InventoryLeftSideBar class="inventory-left-sidebar" :imageSource="placeholderImage" title="Sidebar"
             bodyText="lorem8" />
-        <InventoryGrid class="inventory-grid" />
+        <InventoryGrid class="inventory-grid" :data="places" />
         <InventoryBottomBar class="inventory-bottom" :data="null" :isLoading="true" />
     </div>
 </template>
