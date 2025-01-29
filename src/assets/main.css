@@ -8,3 +8,18 @@
   font-weight: normal;
 }
 
+
+.skeleton {
+  width: 100px;
+  height: 6px;
+  background: #555;
+  animation: skeleton-loading 1s linear infinite alternate
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(240, 0%, 41%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 59%);
+  }
+}
